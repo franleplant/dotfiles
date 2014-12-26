@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'CruizeMissile/Revolution.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'Valloric/YouCompleteMe'
 
 
 " Syntax highlighting polyfills
