@@ -8,7 +8,7 @@ For now they only include Vim and Git configs.
 ## Install
 
 ````sh
-git clone url ~/dotfiles
+git clone https://github.com/franleplant/dotfiles ~/dotfiles
 ln -s ~/dotfiles/.vimrc .vimrc
 ln -s ~/dotfiles/.gitconfig .gitconfig
 ```
