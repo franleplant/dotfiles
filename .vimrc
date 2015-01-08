@@ -20,6 +20,7 @@ Plugin 'CruizeMissile/Revolution.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
 
 
 " Syntax highlighting polyfills
@@ -29,6 +30,7 @@ Plugin 'evidens/vim-twig'
 " Colorschemes
 Plugin 'goatslacker/mango.vim'
 Plugin 'croaker/mustang-vim'
+Plugin 'sickill/vim-monokai'
 
 
 
@@ -37,7 +39,7 @@ filetype plugin indent on
 
 
 " Default colorscheme
-colorscheme mustang
+colorscheme monokai
 
 
 " Vim airline
@@ -155,3 +157,13 @@ nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
 
 
+
+"""""""""""""""
+" Special things
+"""""""""""""""
+
+" Force .es6 file extension to be highlighted as javascript
+au BufReadPost *.es6 set syntax=javascript
+
+" Improve omnicomplete popup menu color
+highlight Pmenu ctermbg=238
