@@ -18,6 +18,13 @@ You also need to install Vundle to handle all the additional Vim plugins automat
 - Install [Vundle](https://github.com/gmarik/Vundle.vim)
 - Run inside Vim `:PluginInstall`
 
+### Additional steps
 
 Vim uses [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin, please read their 
 docs to know what you need to run it properly
+
+Vim uses [Tern.js](https://github.com/marijnh/tern_for_vim), run the following to complete its instalation
+```sh
+cd ~/.vim/bundle/tern_for_vim
+npm install
+```
