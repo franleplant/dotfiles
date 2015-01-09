@@ -8,15 +8,20 @@ For now they only include Vim and Git configs.
 ## Install
 
 ````sh
+# Install Vundle (plugin manager)
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Download the dotfiles
 git clone https://github.com/franleplant/dotfiles ~/dotfiles
+
+# Link them!
 ln -s ~/dotfiles/.vimrc .vimrc
 ln -s ~/dotfiles/.gitconfig .gitconfig
+
+#Install all the Vim plugins
+vim +PluginInstall +qall
 ```
 
-You also need to install Vundle to handle all the additional Vim plugins automatically.
-
-- Install [Vundle](https://github.com/gmarik/Vundle.vim)
-- Run inside Vim `:PluginInstall`
 
 ### Additional steps
 
