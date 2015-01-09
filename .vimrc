@@ -31,6 +31,8 @@ Plugin 'evidens/vim-twig'
 Plugin 'goatslacker/mango.vim'
 Plugin 'croaker/mustang-vim'
 Plugin 'sickill/vim-monokai'
+Plugin 'croaky/vim-colors-github'
+
 
 
 
