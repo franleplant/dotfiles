@@ -3,3 +3,4 @@
 	email = franleplant@gmail.com
 [core]
 	editor = vim
+    excludesfiles = '~/.gitignore_global'
