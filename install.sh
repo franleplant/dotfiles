@@ -24,5 +24,6 @@ npm install
 
 
 # Finish YCM installation
+# Checkout https://github.com/Valloric/YouCompleteMe for more details
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
