@@ -15,8 +15,9 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/franleplant/dotfiles ~/dotfiles
 
 # Link them!
-ln -s ~/dotfiles/.vimrc .vimrc
-ln -s ~/dotfiles/.gitconfig .gitconfig
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.tern-project ~/.tern-project
 
 #Install all the Vim plugins
 vim +PluginInstall +qall
