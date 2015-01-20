@@ -161,6 +161,10 @@ nmap <leader>l :bnext<cr>
 " Previous buffer
 nmap <leader>h :bprevious<cr>
 
+" Delete the current focused buffer
+" (without closing windows or anything else)
+nmap <leader>qq :Bdelete<cr>
+
 
 
 """""""""""""""
