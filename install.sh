@@ -8,7 +8,8 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Symlink the dotfiles
 for file in ./.[!.]*; do
     if [ ! -d "$file" ]; then
-        ln --symbolic --interactive ~/dotfiles/$file ~/$file
+        # Symbolic and interactive
+        ln -si ~/dotfiles/$file ~/$file
     fi
 done
 
