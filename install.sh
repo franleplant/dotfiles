@@ -17,6 +17,10 @@ echo ""
 
 
 echo "Checking dependencies..."
+if ! type "curl" > /dev/null; then
+  echo "curl is not installed"
+fi
+
 if ! type "node" > /dev/null; then
   echo "Node.js is not installed"
 fi
@@ -39,11 +43,13 @@ echo ""
 
 echo "Installing Vim plug (plugin manager)"
 echo ""
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
 echo "Symlinking dotfiles interactively"
 echo ""
-for file in $DIR/.[!.]*; do
+cd $DIR
+for file in ./.[!.]*; do
     if [ ! -d "$file" ]; then
         # Symbolic and interactive
         ln -si $DIR/$file ~/$file
