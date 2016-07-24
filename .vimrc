@@ -1,45 +1,44 @@
 " Enable VIM mode
 set nocompatible
-
-""""""""""""""""
-" Vundle
-""""""""""""""""
-
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+""""""""""""""""
+" Plugin Manager
+""""""""""""""""
 
-" Plungins!!!
-Plugin 'bling/vim-airline'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'CruizeMissile/Revolution.vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'vim-scripts/JavaScript-Indent'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'moll/vim-bbye'
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'bling/vim-airline'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'CruizeMissile/Revolution.vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'vim-scripts/JavaScript-Indent'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'moll/vim-bbye'
+Plug 'racer-rust/vim-racer'
+Plug 'leafgarland/typescript-vim'
+Plug 'mileszs/ack.vim'
+"Plug 'marijnh/tern_for_vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer' }
 
 
 " Syntax highlighting polyfills
-Plugin 'groenewege/vim-less'
-Plugin 'evidens/vim-twig'
+Plug 'groenewege/vim-less'
+Plug 'rust-lang/rust.vim'
 
 " Colorschemes
-Plugin 'goatslacker/mango.vim'
-Plugin 'croaker/mustang-vim'
-Plugin 'sickill/vim-monokai'
-Plugin 'croaky/vim-colors-github'
+Plug 'goatslacker/mango.vim'
+Plug 'croaker/mustang-vim'
+Plug 'sickill/vim-monokai'
+Plug 'croaky/vim-colors-github'
+"""""""""
 
+" Add plugins to &runtimepath
+call plug#end()
 
-
-
-call vundle#end()
 filetype plugin indent on
 
 
@@ -67,9 +66,6 @@ let g:airline_symbols.whitespace = '!'
 
 
 
-""""""""""""""""
-" /Vundle
-""""""""""""""""
 
 """""""""""""""
 " Base
@@ -122,12 +118,12 @@ set virtualedit=all
 """""""""""""
 
 " Tab size in spaces
-set tabstop=4
+set tabstop=2
 " Tab size in spaces for autoindentation
-set shiftwidth=4
+set shiftwidth=2
 
 " When pressing <BS> over spaced tabs, erase them as if they were a single char
-set softtabstop=4
+set softtabstop=2
 
 " Turn tabs into spaces
 set expandtab
@@ -165,6 +161,12 @@ nmap <leader>h :bprevious<cr>
 " (without closing windows or anything else)
 nmap <leader>qq :Bdelete<cr>
 
+map <leader>n :NERDTreeToggle<CR>
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 
 """""""""""""""
@@ -176,3 +178,16 @@ au BufReadPost *.es6 set syntax=javascript
 
 " Improve omnicomplete popup menu color
 highlight Pmenu ctermbg=238
+
+"Autoformat rust on file save
+"let g:rustfmt_autosave = 1
+
+
+
+"Rust
+let g:racer_cmd = "racer"
+let $RUST_SRC_PATH="/usr/local/rust/src/"
+
+
+set nobackup
+set noswapfile

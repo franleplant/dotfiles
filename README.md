@@ -21,8 +21,6 @@ git clone https://github.com/franleplant/dotfiles ~/dotfiles
 - Git
 - Node and Npm
 - Vim 7.4
-
-
-## TODO
-
-- Add checks for the requirements http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
+- Rust
+- Racer
+- Rust src
