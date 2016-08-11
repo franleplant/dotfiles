@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+
+if [ "$(whoami)" != "root" ]; then
+  echo "Sorry, you are not root."
+  exit 1
+fi
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo ""
@@ -12,7 +18,6 @@ echo "------------------"
 echo ""
 echo "Notes:"
 echo "- Make sure you have Vim > 7.4"
-echo "- Rust src should be cloned into /usr/local/rust/src/"
 echo ""
 
 
@@ -59,7 +64,19 @@ done
 
 
 echo "Installing all Vim plugins (It will take a while)"
+echo ""
 vim +PlugInstall +quitall
+
+
+echo "Cloning Rust Src to /usr/local/rust"
+echo ""
+cd /tmp
+curl https://codeload.github.com/rust-lang/rust/tar.gz/master -o rust-master.tar.gz
+tar -xvf rust-master.tar.gz
+echo " ====> removing existing rust copy"
+rm -rf /usr/local/rust
+mv rust-master /usr/local/rust
+
 
 
 
