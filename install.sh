@@ -24,22 +24,31 @@ echo ""
 echo "Checking dependencies..."
 if ! type "curl" > /dev/null; then
   echo "curl is not installed"
+  exit 1
 fi
 
 if ! type "node" > /dev/null; then
   echo "Node.js is not installed"
+  exit 1
 fi
 
 if ! type "git" > /dev/null; then
   echo "git is not installed"
+  exit 1
 fi
 
 if ! type "rustc" > /dev/null; then
   echo "rust is not installed"
+  exit 1
 fi
 
 if ! type "racer" > /dev/null; then
   echo "racer is not installed"
+  exit 1
+fi
+if ! type "tmux" > /dev/null; then
+  echo "tmux is not installed"
+  exit 1
 fi
 echo ""
 echo "Done!"
@@ -49,6 +58,13 @@ echo ""
 echo "Installing Vim plug (plugin manager)"
 echo ""
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo "Installing tmux config"
+echo ""
+cd $DIR
+rm -rf ~/.tmux
+git clone https://github.com/gpakosz/.tmux.git
+ln -s .tmux/.tmux.conf ~/.tmux.conf
 
 
 echo "Symlinking dotfiles interactively"
@@ -76,7 +92,6 @@ tar -xvf rust-master.tar.gz
 echo " ====> removing existing rust copy"
 rm -rf /usr/local/rust
 mv rust-master /usr/local/rust
-
 
 
 
