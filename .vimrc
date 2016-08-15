@@ -168,19 +168,16 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+nmap j gj
+nmap k gk
 
-"""""""""""""""
-" Special things
-"""""""""""""""
 
-" Force .es6 file extension to be highlighted as javascript
-au BufReadPost *.es6 set syntax=javascript
+"""""""""""""
+" Special Things
+"""""""""""""
 
-" Improve omnicomplete popup menu color
-highlight Pmenu ctermbg=238
-
-"Autoformat rust on file save
-"let g:rustfmt_autosave = 1
+" CtrlP ignores
+set wildignore+=*/node_modules/*,*/bower_components/*,
 
 
 
