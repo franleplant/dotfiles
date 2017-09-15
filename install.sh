@@ -46,10 +46,10 @@ if ! type "racer" > /dev/null; then
   echo "racer is not installed"
   exit 1
 fi
-#if ! type "tmux" > /dev/null; then
-  #echo "tmux is not installed"
-  #exit 1
-#fi
+if ! type "tmux" > /dev/null; then
+  echo "tmux is not installed"
+  exit 1
+fi
 echo ""
 echo "Done!"
 echo ""
@@ -58,13 +58,6 @@ echo ""
 echo "Installing Vim plug (plugin manager)"
 echo ""
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-#echo "Installing tmux config"
-#echo ""
-#cd $DIR
-#rm -rf ~/.tmux
-#git clone https://github.com/gpakosz/.tmux.git ~/.tmux
-#ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 
 
 echo "Symlinking dotfiles interactively"
