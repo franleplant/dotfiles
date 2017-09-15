@@ -13,7 +13,7 @@ Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'CruizeMissile/Revolution.vim'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/JavaScript-Indent'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -23,6 +23,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mileszs/ack.vim'
 "Plug 'marijnh/tern_for_vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer' }
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 
 
 " Syntax highlighting polyfills
@@ -34,6 +36,8 @@ Plug 'goatslacker/mango.vim'
 Plug 'croaker/mustang-vim'
 Plug 'sickill/vim-monokai'
 Plug 'croaky/vim-colors-github'
+Plug 'flowtype/vim-flow'
+Plug 'mxw/vim-jsx'
 """""""""
 
 " Add plugins to &runtimepath
@@ -44,6 +48,9 @@ filetype plugin indent on
 
 " Default colorscheme
 colorscheme monokai
+
+" enable jsx syntax highlihgting for .js files
+let g:jsx_ext_required = 0
 
 
 " Vim airline
@@ -176,6 +183,10 @@ nmap k gk
 " Special Things
 """""""""""""
 
+" flow
+let g:flow#autoclose = 1
+
+
 " CtrlP ignores
 set wildignore+=*/node_modules/*,*/bower_components/*,
 
@@ -188,3 +199,7 @@ let $RUST_SRC_PATH="/usr/local/rust/src/"
 
 set nobackup
 set noswapfile
+
+
+au BufRead,BufNewFile *.js set filetype=typescript
+au BufRead,BufNewFile *.jsx set filetype=typescript
