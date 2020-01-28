@@ -177,6 +177,9 @@ nnoremap <c-l> <c-w>l
 nmap j gj
 nmap k gk
 
+" alternate escape key
+imap jj <Esc>
+
 
 """""""""""""
 " Special Things
