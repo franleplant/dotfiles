@@ -22,5 +22,3 @@ git clone https://github.com/franleplant/dotfiles ~/dotfiles
 - Node and Npm
 - Vim 7.4
 - Rust
-- Racer
-- Rust src
