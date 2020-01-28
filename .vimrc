@@ -21,8 +21,7 @@ Plug 'moll/vim-bbye'
 Plug 'racer-rust/vim-racer'
 Plug 'leafgarland/typescript-vim'
 Plug 'mileszs/ack.vim'
-"Plug 'marijnh/tern_for_vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --rust-completer --ts-completer' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 
