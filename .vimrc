@@ -48,8 +48,6 @@ call plug#end()
 filetype plugin indent on
 
 
-" Default colorscheme
-colorscheme monokai-bold
 
 " enable jsx syntax highlihgting for .js files
 let g:jsx_ext_required = 0
@@ -82,6 +80,9 @@ let g:airline_symbols.whitespace = '!'
 
 syntax on
 
+" Default colorscheme
+colorscheme monokai-bold
+
 " Set encoding
 set encoding=utf-8
 
@@ -96,7 +97,7 @@ set lazyredraw
 
 " Show hidden chars like tab, space, and cr
 set listchars=trail:•,extends:#,tab:>-
-set list
+set nolist
 
 " Improve history size
 set history=1000

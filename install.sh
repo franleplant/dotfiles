@@ -37,10 +37,6 @@ if ! type "git" > /dev/null; then
   exit 1
 fi
 
-if ! type "rustc" > /dev/null; then
-  echo "rust is not installed"
-  exit 1
-fi
 
 if ! type "tmux" > /dev/null; then
   echo "tmux is not installed"
