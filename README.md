@@ -19,7 +19,6 @@ brew install tmux
 # zsh (not required)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-
 ```
 
 ## Install
@@ -32,4 +31,19 @@ git clone https://github.com/franleplant/dotfiles ~/dotfiles
 # This will symlinc your dotfiles and run some Vim plugin required actions
 ~/dotfiles/install.sh
 ```
+
+## Vim Coc extensions
+
+Install all the Coc Extensions you need, here are some suggeste ones
+
+(inside vim)
+
+```sh
+# json, tsserver and rust
+:CocInstall coc-json coc-tsserver coc-rls
+
+```
+
+You can find all your Coc extensions in `~/.config/coc/extensions/package.json`
+
 

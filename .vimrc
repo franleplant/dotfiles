@@ -20,7 +20,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'moll/vim-bbye'
 Plug 'leafgarland/typescript-vim'
 Plug 'mileszs/ack.vim'
-"Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --rust-completer --ts-completer' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
